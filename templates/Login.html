@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+rel="stylesheet"
+/>
+
+<style>
+  .gradient-custom
+   {
+    background: radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #720059 100%), linear-gradient(121.28deg, #669600 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+  }
+  .intro{
+    position: relative;
+  
+  }
+  .container
+  {
+  background-color:transparent;
+  position:absolute;
+  right: -850px;
+  background-color: #00021e;
+  }
+  img
+  {
+    height: 740px;
+    width: 850px;
+    position:fixed;
+  }
+  .card{
+    width: 550px;
+    background-color:#00021e;
+    color: #fff;
+  }
+  body
+  {
+     width: 670px;
+     background-color: #00021e;
+  }
+  label{
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+  <section class="intro">
+    <img src="https://static.hd-trailers.net/images/qohUDOOFcqBDch8WqK0HcdB8cSI.jpg" alt="" srcset="">
+      <div class="container">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+                <div class="my-md-5 pb-5">
+  
+                  <h1 class="fw-bold mb-0">Welcome</h1>
+  
+                  <i class="fas fa-user-astronaut fa-3x my-5"></i>
+                  <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-outline mb-4">
+                      <input style="background-color:rgb(18, 1, 1); color:white" type="username" id="username" class="form-control form-control-lg" name="username" required/>
+                      <label class="form-label" for="username" style="color:white;">Username</label>
+                    </div>
+
+                    <div class="form-outline mb-5">
+                      <input style="background-color:rgb(18, 1, 1); color:white" type="password" id="password" class="form-control form-control-lg"  name="password" required/>
+                      <label class="form-label" for="password" style="color: white;">Password</label>
+                    </div>
+
+                    <a href="{% url 'Home' %}"><button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-5" type="submit">Login</button></a>
+                
+                  </form>
+                  <a href="{% url 'reset_password' %}" style="position: relative;top:50px"><button class="btn btn-primary btn-lg btn-rounded text-light px-5" type="submit">change_password</button></a>
+                </div>
+  
+                <div>
+                  <p class="mb-0">Don't have an account? <a href="{% url 'registration' %}" class="text-body fw-bold">Sign Up</a></p>
+                </div>
+  
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

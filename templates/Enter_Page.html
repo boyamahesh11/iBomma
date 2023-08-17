@@ -1,0 +1,60 @@
+
+
+{% extends 'dummy.html' %}
+
+
+{% block body_block %}
+<div class="card">
+    <div class="card-body">
+        <img src="https://mozous.com/wp-content/uploads/2022/12/iBOMMA-app-icon.png" alt="" class="img">
+        <h5>100% indian Entertainment</h5>
+      <a href="{% url 'Login' %}" style="height:50px; width:120px;" class="btn btn-success" >Enter</a>
+      <p>Watch indian Movies online free from iBOMMA.com OFFICIAL.Hindhi Telugu Tamil Kanadda Malayalam</p>
+    </div>
+  </div>
+
+<style>
+    .card
+        {
+            height: 400px;
+            width: 700px;
+            text-align: center;
+            margin-top: 150px;
+            margin-left: 400px;
+            margin-bottom: 300px;
+            background-color:black;
+            color: white;
+            padding: 100px;
+
+        }
+        body
+        {
+            background-color: rgb(5, 5, 5);
+        }
+        .card-body
+        {
+            padding: 20px;
+            margin-top: -200px;
+
+        }
+        .btn {
+            font-size: 20px;
+            height: 10px;
+            margin-top: 5px;
+        }
+        p
+        {
+            margin-top: 30px;
+        }
+        h5
+        {
+            margin-bottom: 30px;
+        }
+        .img
+        {
+            height: 250px;
+            width: 250px;
+
+        }
+</style>
+{% endblock %}

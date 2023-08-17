@@ -1,0 +1,533 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ibomma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+   
+    <style>
+        *
+        {
+            margin: 0;
+            padding:0;
+            outline: 0;
+            box-sizing:border-box;
+            font-family:'Montserrat', sans-serif;
+        
+        }
+        body
+        {
+            background-color: #2c2e30;
+           
+            overflow-x: hidden;
+        }
+        nav
+        {
+           background-color: black;
+            display: flex;
+            text-align: right;
+            align-items: center;
+            height:90px;
+            padding: 0 100px;
+        }
+        img
+        {
+            height: 90px;
+            width: 150px;
+            display: flex;
+        
+        }
+        nav.log
+        {
+            cursor: pointer;
+        }
+        nav .nav-items
+        {
+            display: flex;
+            flex:1;
+            padding:0 0 0 50px;
+            margin-left:330px;
+        }
+        .logo
+        {
+            margin-right: 700px;
+            
+        }
+        img
+        {
+            margin-left: -100px;
+        }
+         a
+        {
+           position: relative;
+           left: 50px;
+           padding:5px;
+        }
+        .tiru
+        {
+            position: relative;
+            left:50px;
+        }
+        nav .nav-items
+        a{
+            color: aliceblue;
+            font-size: 13px;
+            font-weight:500px;
+            text-decoration: none;
+            padding: 5px;
+            margin-left:15px;
+        }
+        nav .nav-items
+        a i{
+            color: green;
+            padding: 5px;
+
+        }
+        nav form
+        {
+            display: flex;
+            height: 40px;
+            padding: 2px;
+            background:rgb(39, 37, 37);
+            min-width: 18% !important;
+            border-radius: 30px;
+            border: 1px solid rgba(155,155,155,0.2);
+       }
+       nav form .search.data
+       {
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        color: rgb(223, 14, 14);
+        font-size: 17px;
+        border: none;
+        font-weight: 500;
+        background: none;
+
+       }
+       nav form button
+       {
+        padding: 0 15px;
+        color: white;
+        font-size: 17px;
+        background: rgb(9, 141, 40);
+        border: none;
+        border-top-right-radius:17px;
+        border-bottom-right-radius:17px;
+        cursor: pointer;
+       }
+         nav form button:hoverE
+       {
+        background: #218323e1;
+       } 
+       .content
+       {
+        margin-top: 30px;
+        text-align: center;
+        color: white;
+
+       }
+       .content h1
+       {
+        justify-content: space-between;
+        letter-spacing: 15px;
+        font-family: 'EB Garmond',serif;
+       }
+       .content p
+       {
+        margin-top:10px;
+
+       }
+       .content p i
+       {
+        color: green;
+       }
+       #a
+       {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+       }
+       #b
+       {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+
+       }
+       #c
+       {
+        background-color:green;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+       }
+       #x
+       {
+        background-color: green;
+       }
+       #y
+       {
+        background-color: green;
+       }
+       #z
+       {
+        background-color: green;
+       }
+       button
+       {
+        position: relative;
+        top: 60px;
+        margin-left: 30px;
+       }
+       .mahi
+       {
+        position: relative;
+        top: 30px;
+       }
+       p
+       {
+        position: relative;
+        top: 20px;
+       }
+       .nv
+       {
+        position: relative;
+        bottom: 60px;
+        right: 35px;
+        
+       }
+       .nn
+       {
+        border-radius: 45px;
+        position: relative;
+       }
+       .nvn
+       {
+        position:relative;
+        display: flex;
+        justify-content: space-evenly;
+        width:350px;
+       }
+       #king{
+        width:1200px;
+       }
+       .movie-items
+       {
+        width: 100%;
+        height:10%;
+        margin-top:30px;
+        margin-left: 1%;
+        padding: 5px;
+        display: flex;
+        justify-content:space-around;
+        margin-top:70px;
+        margin-left: 40px;
+       }
+       .column
+       {
+        float:left;
+        width: 16.66%;
+        cursor: pointer;
+
+       }
+       .column img
+       {
+        border-radius:10px;
+
+       }
+       .row::after
+       {
+        content:'';
+        clear: both;
+        display: table;
+       }
+       .column h4,p
+       {
+        color: white;
+       }
+       .column:hover
+       {
+        scale: 1.1;
+       }
+       #search{
+        position: absolute;
+        top:2px;
+        right: 0;
+        height:34px;
+       }
+       .mahiimg{
+        height: 350px;
+        width: 200px;
+       }
+       #kk
+       {
+        position: relative;
+        right: 50px;
+       }
+       #ll
+       {
+        position: relative;
+        right: 400px;
+       }
+    </style>
+</head>
+<body>
+    <!-- <h1>This is home page</h1> -->
+    <nav>
+        <div class="logo">
+            <!-- <img src="{% static 'images/logo.jpg' %}"> -->
+            <img src="https://mozous.com/wp-content/uploads/2022/12/iBOMMA-app-icon.png" alt="" srcset="">
+        </div>
+        <div class="nvn">
+            <!-- <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> -->
+            <a href="{% url 'About' %}" style="color: ghostwhite;"><i class="fa-solid fa-user-group" id="x" ></i>About</a>
+            <a href="{% url 'Bug' %}" style="color: ghostwhite;"><i class="fa-solid fa-bug" id="y"></i>Bug Report</a>
+            <a href="{% url 'Home' %}" style="color: ghostwhite;"><i class="fa-solid fa-house" id="z"></i>Home</a>
+        </div>
+        </div>
+        <form action="#" class="tiru">
+            <input type="search" class="search-data nn" placeholder="search" required >
+            <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass" ></i></button>
+        </form>
+    </nav>
+    <div class="content">
+        <h1>Quality & Clarity Matters</h1>
+        <p>Watch Download Telugu Movies in an excellent Quality at the smallest file size <br>Exclusive designed an developed for the smartphones, table and Pcs</p>
+        <p class="mahi"><i class="fa-solid fa-star"></i>&nbsp;Remove the browser cache,reload</p>
+        <!-- <button type="submit" id="a">Telugu</button>
+        <button type="submit" id="b">English</button>
+        <button type="button" id="c">Hindhi</button> -->
+
+        <button type="submit" class="btn btn-light">TEL</button>
+        <a href="{% url 'Tamil' %}"><button type="submit" class="btn btn-success">TAM</button></a>
+        <a href="{% url 'Hindi' %}"><button type="button" class="btn btn-success">HIN</button></a>
+    </div>
+    <section class="movie-items">
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/hi-gfh1b/maaveeran-2023-f3dgb-hindi-movie-watch-online.html"><img src="https://pbs.twimg.com/media/FXteQISaMAA-z6b?format=jpg&name=large" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Maveeran</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/hi-gfh1b/adipurush-2023-vxb3d-hindi-movie-watch-online.html"><img src="https://pbs.twimg.com/media/FuTC6foaYAAcbie.jpg:large" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Adhipursh</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/hi-gfh1b/satyaprem-ki-katha-2023-vse1c-hindi-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BZTcxMzRiMjktMTRlMC00MWNmLTg5NjYtYzZhMTZiYzU0ZDNjXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">PremKatha</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/neymar-2023-vr1ec-telugu-movie-watch-online.html"><img src="https://bingeddata.s3.amazonaws.com/uploads/2023/07/neymar.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Neymar</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/pareshan-2023-yvx1c-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BNDFhMGNiN2YtMjQ4ZS00NDBmLTliZGEtNGVjMDk3MTM4YjNkXkEyXkFqcGdeQXVyMjMxMjQ4OTg@._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Preshan</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/hidimbha-2023-veh3c-telugu-movie-watch-online.html"><img src="https://moviegalleri.net/wp-content/uploads/2021/08/Ashwin-Babu-Hidimba-First-Look-HD-Poster.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Hidamba</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+    </section>
+    <section class="movie-items">
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/bhaag-saale-2023-brt1d-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BNmExZDBmYTEtYTM1Mi00MTRiLWFjNjYtMzU1NjMzMTAxMGRlXkEyXkFqcGdeQXVyNjgxNzE1MDk@._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Bhaagsale</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/rangabali-2023-b1tsr-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BYWE2NjA4YzAtNjI4NS00OTZhLTgyMTItYjJhNzY5YmNmOTYxXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_FMjpg_UX1000_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Rangabali</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/rudrangi-2023-v1sdc-telugu-movie-watch-online.html"><img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/rudrangi-et00358053-1688464735.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Rudragi</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/samajavaragamana-2023-trv1b-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BZmRlZDM5OTMtZmUwNS00MTY4LWFmYzItYjRiZGY0MmM0MmJkXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_FMjpg_UX1000_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Samaja</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/nayakudu-2023-ftg1b-telugu-movie-watch-online.html"><img src="https://d1vzdswwroofzl.cloudfront.net/wp-content/uploads/2023/07/Nayakudu-Movie-Review-and-Rating.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Nayakudu</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/spy-2023-t1gdf-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BMGFlYWIxMTEtMmFhZi00YzlhLTkyYmMtZjJlOGU4MzE4ZDZjXkEyXkFqcGdeQXVyMTU0ODI1NTA2._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Spy</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+    </section>
+    <section class="movie-items">
+        <div class="class-row">
+            <div class="column">
+                <a href=""><img src="https://st1.bollywoodlife.com/wp-content/uploads/2023/08/ja-1.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Jailer</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href=""><img src="https://www.filmibeat.com/fanimg/movie/20313/bhola-shankar-photos-images-2023050175901400.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Bhola</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2023</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/veera-simha-reddy-telugu-2023-t1gfd-telugu-movie-watch-online.html"><img src="https://www.cinejosh.com/reviewsimg/big/veera-simha-reddy-review_b_1201230954.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Verasimha</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2022</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/dhamaka-telugu-2022-vst1d-telugu-movie-watch-online.html"><img src="https://static.moviecrow.com/gallery/20220921/205613-dhamaka.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Dhamaka</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2022</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/rrr-telugu-2022-td1pd-telugu-movie-watch-online.html"><img src="https://e1.pxfuel.com/desktop-wallpaper/53/616/desktop-wallpaper-rrr-stills-first-look-posters-of-rrr-movie-rrr-poster.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">RRR</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2022</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/pushpa-the-rise-part-1-telugu-2021-telugu-movie-watch-online.html"><img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2021/10/Pushpa.jpeg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Pushpa</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+    </section>
+    <section class="movie-items">
+        <div class="class-row">
+            <div class="column">
+                <a href=""><img src="https://d1vzdswwroofzl.cloudfront.net/wp-content/uploads/2023/01/Waltair-Veerayya-Movie-Review-Rating-3.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Veeraya</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/khiladi-telugu-2022-telugu-movie-watch-online.html"><img src="https://images.news18.com/ibnlive/uploads/2022/01/ravi-teja-1.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Khiladi</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/master-2021-telugu-telugu-movie-watch-online.html"><img src="https://m.media-amazon.com/images/M/MV5BOTRkYWY3ZGEtYzU5My00ZGY4LThhYjEtNTYyNzFhMDM4MTUyXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Master</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/k-g-f-chapter-2-telugu-2022-p1kag-telugu-movie-watch-online.html"><img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/f5a21f64af7359f7aaa7c29dee8a12a97630e707cdbf71e0ae6b063322fb8575._RI_TTW_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Kgf2</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/vikram-hitlist-telugu-2022-vs1ca-telugu-movie-watch-online.html"><img src="https://wallpaperaccess.com/full/8242549.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Vikram</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/akhanda-telugu-2021-telugu-movie-watch-online.html"><img src="https://img1.hotstarext.com/image/upload/f_auto,t_vl/sources/r1/cms/prod/4168/1104168-v-ba2198deb8fd" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Akhanda</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+    </section>
+    <section class="movie-items">
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/v-telugu-2020-telugu-movie-watch-online.html"><img src="https://flxt.tmsimg.com/assets/p17976164_p_v8_ac.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">V</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/majili-2019-telugu-movie-watch-online.html"><img src="https://e1.pxfuel.com/desktop-wallpaper/724/1009/desktop-wallpaper-naga-chaitanya-majili-movie-first-look-ultra-posters-majili.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Majili</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2021</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/liger-telugu-2022-z1hzz-telugu-movie-watch-online.html"><img src="https://cdn.bollywoodmdb.com/fit-in/movies/largethumb/450x450/2021/liger/poster.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Liger</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/war-2019-telugu-movie-watch-online.html"><img src="https://e1.pxfuel.com/desktop-wallpaper/612/675/desktop-wallpaper-12-war-ideas-war-hindi-movie.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">War</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href=""><img src="https://m.media-amazon.com/images/M/MV5BN2RjOTQ2M2UtMjA0NC00MjNhLTgwZjUtOWJmOWY0OTM1ZGUzXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">Veerpksha</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+        <div class="class-row">
+            <div class="column">
+                <a href="https://www.ibomma.net/te-m1djv/rx-100-2018-telugu-movie-watch-online.html"><img src="https://www.thetelugufilmnagar.com/wp-content/uploads/2019/03/TFN-artical-Amazon-Featured-imagerx-100.jpg" alt="" class="mahiimg"></a>
+                <h5 style="color: ghostwhite;" id="kk">RX100</h5>
+                <p class="btn btn-success" style="position: relative; right:50px; margin-top:-20px;">2019</p>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+</html>

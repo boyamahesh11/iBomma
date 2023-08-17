@@ -1,0 +1,40 @@
+{% extends 'dummy.html' %}
+
+
+{% block body_block %}
+<style>
+  body
+  {
+    background-image: url("https://uhdwallpapers.org/uploads/cache/2958645299/anonymous-mask_600x338-mm-90.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+  }
+  form
+  {
+    height: 300px;
+    width: 300px;
+    margin-left: 900px;
+    margin-top: 260px;
+    background-color: rgb(3, 3, 42);
+    padding: 50px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+    padding-right:10px;
+    
+  }
+  #i
+  {
+    border-bottom: 5px ridge cyan;
+  }
+</style>
+<center>
+  <form method="POST">
+      {% csrf_token %}
+      <br><br>
+      <label for="newpassword">New password : </label>
+      <input type="password" name="newpassword" id="password"><br><br>
+      <input type="submit" value="change_password" class="btn btn-success">
+  </form>
+</center>
+{% endblock %}

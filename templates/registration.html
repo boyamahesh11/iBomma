@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <style>
+        body
+        {
+            background-image: url("https://m.media-amazon.com/images/I/81yZQXpZ6TL._AC_UF1000,1000_QL80_.jpg");
+            background-color:rgb(16, 15, 15);
+            background-position: right top ;
+            background-repeat: no-repeat;
+            color:ghostwhite;
+            font-size: 20px;
+        }
+        table
+        {
+          position: relative; 
+            left: 150px;
+            top:   100px;
+            margin: 2px double red;
+        }
+        input{
+            margin-left: -100px;
+            margin:10px 0;
+            background: transparent;
+            color: #fff;
+        
+        }
+        h1
+        {
+            position: relative;
+            top: -30px;
+            left: 70px;
+        }
+        .btn{
+            position: relative;
+            bottom:-550px;
+            left: 310px;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- <h1 style="color:  blue;" class="kk"> REGISTER FORM</h1> -->
+        <table>
+        <form method="POST" enctype="multipart/form-data">
+           
+            {% csrf_token %}
+            
+          <tr>
+               <td> <h1 style="color:  rgb(255, 0, 128); text-align:center;"> REGISTER FORM</h1></td>
+            </tr>
+        <tr>
+           <td style="color: ghostwhite;"> {{umf}} </td>
+        </tr>
+        <tr>
+           <td>{{pmf}}</td>
+        </tr>
+        <tr>
+        <a href="{% url 'Login' %}"><button type="submit" class="btn btn-success" value="submit">Submit</button></a>
+        </tr>
+            
+        </form>
+        </table>
+    
+    
+
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+</body>
+</html>

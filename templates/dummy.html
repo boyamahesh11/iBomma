@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}
+  <title>Document</title>
+  {% endblock %}
+  
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+  rel="stylesheet"
+/>
+<style>
+a{
+  margin-right: 30px;
+}
+  aside
+  {
+    position: relative;
+    right: 650px;
+    width: 650px;
+    font-size: larger;
+
+  }
+</style>
+</head>
+<body>
+  <!-- Image and text -->
+<nav class="navbar navbar-black bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://mozous.com/wp-content/uploads/2022/12/iBOMMA-app-icon.png"
+        class="me-2"
+        height="80"
+        width="100px"
+        alt="MDB Logo"
+        loading="lazy"
+      />
+      <aside>
+      <a href="{% url 'Enter_Page' %}"><small style="color: aliceblue;">𝕳𝖔𝖒𝖊</small></a>
+      <a href="{% url 'registration' %}"><small style="color: aliceblue;">𝕽𝖊𝖌𝖎𝖘𝖙𝖊𝖗𝖆𝖙𝖎𝖔𝖓</small></a>
+      <a href="{% url 'Login' %}"><small style="color: aliceblue;">𝕷𝖔𝖌𝖎𝖓</small></a>
+      <a href="{% url 'reset_password' %}"><small style="color: aliceblue;">𝕮𝖍𝖆𝖓𝖌𝖊_𝖕𝖆𝖘𝖘𝖜𝖔𝖗𝖉</small></a>
+      </aside>
+    </a>
+  </div>
+</nav>
+    
+    <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+></script>
+
+{% block body_block %}
+{% endblock %}
+</body>
+</html>
